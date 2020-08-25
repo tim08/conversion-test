@@ -21,7 +21,16 @@
     <%= submit_tag("Расчет") %>
   <% end %>
     </div>
+    <a href="" id="add-test-data" onclick='setTestData(); return false;'>Занести тестовые данные</a>
     <div class="col">
   </div>
   </div>
 </div>
+
+<script>
+  function setTestData() {
+      document.getElementById('in').value = '+79261234567, +7 (926)1234568, 8-926-123-45-67';
+      document.getElementById('out').value = '9261234567';
+  }
+
+</script>
