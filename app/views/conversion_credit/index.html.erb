@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+  <h2>Система расчета конверсии</h2>
+  <% flash.each do |type, msg| %>
+
+    <div class="alert alert-success" role="alert">
+      <%= msg %>
+    </div>
+  <% end %>
+  <%= form_with(url: conversion_credit_calculate_url, local: false) do %>
+    <%= label_tag(:in, "Введите номера телефонов(заявки клиентов на кредит из разных источников) через запятую") %>
+    <br>
+    <%= text_area_tag :in, nil, rows: 2, cols: 60 %>
+    <br>
+    <%= label_tag(:out, "Введите номера телефонов(выданных кредитов) через запятую") %>
+    <br>
+    <%= text_area_tag :out, nil, rows: 2, cols: 60 %>
+
+    <br>
+    <%= submit_tag("Расчет") %>
+  <% end %>
+    </div>
+    <div class="col">
+  </div>
+  </div>
+</div>
